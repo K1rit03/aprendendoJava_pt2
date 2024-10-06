@@ -1,12 +1,19 @@
+package br.com.alura.aprendendojava.modelos;
+
 public class Filme {
-    String nome;
+    public String nome;
     int anoDeLancamento;
     boolean incluidoNoPLano;
-    double somaAvaliacao;
-    int totalDeAvaliacoes;
+    private double somaAvaliacao;
+    private  int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
-    void minhaFichaTecnica(){
+
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
+
+    public void minhaFichaTecnica(){
 
         System.out.println("nome do filme:" + nome);
         System.out.println("Ano de lançamento:" + anoDeLancamento);
@@ -14,12 +21,12 @@ public class Filme {
 
 
     }
-    void avalia(double nota){
+    public void avalia(double nota){
         somaAvaliacao += nota;
         totalDeAvaliacoes++;
     }
 
-    double mediaAvaliacao(){
+    public double mediaAvaliacao(){
         return somaAvaliacao / totalDeAvaliacoes;
     }
 }
