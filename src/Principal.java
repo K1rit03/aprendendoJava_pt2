@@ -4,6 +4,8 @@ import br.com.alura.aprendendojava.modelos.Serie;
 import br.com.alura.aprendendojavacalculo.modelos.CalculadoraTempo;
 import br.com.alura.aprendendojavacalculo.modelos.FiltroRecomencao;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme();
@@ -58,5 +60,23 @@ public class Principal {
         episodio.setSerie(peakyblinders);
         episodio.setTotalVisu(300);
         filtro.filtra(episodio);
+
+        var filme3 = new Filme();
+        filme3.setNome("Django Livre");
+        filme3.setAnoDeLancamento(2013);
+        filme3.setDuracaoEmMinutos(165);
+        filme3.avalia(9);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filme2);
+        listaDeFilmes.add(filme3);
+
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme:" + listaDeFilmes.get(0).getNome());
+
+        System.out.println(listaDeFilmes);
+
     }
 }
