@@ -1,3 +1,5 @@
+package br.com.alura.Principal;
+
 import br.com.alura.aprendendojava.modelos.Episodio;
 import br.com.alura.aprendendojava.modelos.Filme;
 import br.com.alura.aprendendojava.modelos.Serie;
@@ -6,7 +8,7 @@ import br.com.alura.aprendendojavacalculo.modelos.FiltroRecomencao;
 
 import java.util.ArrayList;
 
-public class Principal {
+public class  Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme("Scarface",1984);
         filme1.setDuracaoEmMinutos(170);

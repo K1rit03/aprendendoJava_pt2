@@ -1,6 +1,9 @@
 package br.com.alura.Exercicios;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
 
 public class Principal {
     public static void main(String[] args) {
@@ -48,7 +51,31 @@ public class Principal {
 
         System.out.println("Media dos produtos:" + precoTotal/listaProdutos.size());
 
+        ArrayList<Integer> lista2 = new ArrayList<>();
+        lista2.add(20);
+        lista2.add(350);
+        lista2.add(7);
+        lista2.add(2);
+        lista2.add(630);
+        lista2.add(69);
 
+        Collections.sort(lista2);
+        System.out.println(lista2);
+
+
+        ArrayList<Titulo> listaExercicio2 = new ArrayList<>();
+        Titulo titulo1 = new Titulo("Alberto");
+        Titulo titulo2 = new Titulo("Thiago");
+        Titulo titulo3 = new Titulo("Zaki");
+        Titulo titulo4 = new Titulo("Beto");
+        Titulo titulo5 = new Titulo("Antonio");
+        listaExercicio2.add(titulo1);
+        listaExercicio2.add(titulo2);
+        listaExercicio2.add(titulo3);
+        listaExercicio2.add(titulo4);
+        listaExercicio2.add(titulo5);
+        Collections.sort(listaExercicio2);
+        System.out.println(listaExercicio2);
 
 
     }

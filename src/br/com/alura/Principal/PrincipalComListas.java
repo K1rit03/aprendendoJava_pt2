@@ -4,7 +4,7 @@ import br.com.alura.aprendendojava.modelos.Filme;
 import br.com.alura.aprendendojava.modelos.Serie;
 import br.com.alura.aprendendojava.modelos.Titulo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class PrincipalComListas {
         var filme3 = new Filme("Django Livre",2013);
         filme3.avalia(9);
         Serie peakyblinders = new Serie("Peaky blinders",2013);
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
 
         lista.add(filme1);
         lista.add(filme2);
@@ -34,5 +34,17 @@ public class PrincipalComListas {
         }
 
 
+        ArrayList<String> buscaArtista = new ArrayList<>();
+
+        buscaArtista.add("Adam sandler");
+        buscaArtista.add("Leornado dicaprio");
+        buscaArtista.add("Brad Pitt");
+        System.out.println(buscaArtista);
+
+        Collections.sort(buscaArtista);
+        System.out.println("depois da ordenação: " + buscaArtista);
+        System.out.println("Lista de titulos ordenados:");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }
