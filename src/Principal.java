@@ -8,15 +8,9 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme1 = new Filme();
-        filme1.setNome("ScarFace");
-        filme1.setAnoDeLancamento(1984);
+        Filme filme1 = new Filme("Scarface",1984);
         filme1.setDuracaoEmMinutos(170);
         System.out.println("Duração do filme:" + filme1.getDuracaoEmMinutos() );
-
-
-
-
 
         filme1.minhaFichaTecnica();
         filme1.avalia(8);
@@ -26,9 +20,8 @@ public class Principal {
         System.out.println(filme1.getTotalDeAvaliacoes());
         System.out.println(filme1.mediaAvaliacao());
 
-        Serie peakyblinders = new Serie();
-        peakyblinders.setNome("Peaky Blinders");
-        peakyblinders.setAnoDeLancamento(2013);
+        Serie peakyblinders = new Serie("Peaky blinders",2013);
+
         peakyblinders.setTemporadas(6);
         peakyblinders.setEpisodiosPorTemporada(6);
         peakyblinders.setMinutosPorEpisodio(55);
@@ -38,9 +31,8 @@ public class Principal {
 
         System.out.println("Duração do para maratonar Peaky Blinders:" + peakyblinders.getDuracaoEmMinutos() );
 
-        Filme filme2 = new Filme();
-        filme2.setNome("Ted2");
-        filme2.setAnoDeLancamento(2015);
+        Filme filme2 = new Filme("Ted 2",2015);
+
         filme2.setDuracaoEmMinutos(116);
 
 
@@ -61,9 +53,7 @@ public class Principal {
         episodio.setTotalVisu(300);
         filtro.filtra(episodio);
 
-        var filme3 = new Filme();
-        filme3.setNome("Django Livre");
-        filme3.setAnoDeLancamento(2013);
+        var filme3 = new Filme("Django Livre",2013);
         filme3.setDuracaoEmMinutos(165);
         filme3.avalia(9);
 
@@ -77,6 +67,9 @@ public class Principal {
         System.out.println("Primeiro filme:" + listaDeFilmes.get(0).toString());
 
         System.out.println(listaDeFilmes);
+
+
+
 
     }
 }
